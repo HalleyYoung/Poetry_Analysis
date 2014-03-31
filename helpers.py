@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 """
 helpers.py
-helper function
+helper functions
 """
 
 #Turns a two-d list into a 1-D list.

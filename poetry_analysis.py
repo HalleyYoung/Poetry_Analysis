@@ -1,6 +1,6 @@
 #!/usr/bin/env python2.7
 """
-poetry.py
+poetry_analysis.py
 A poetry analysis program
 """
 import word as wd
@@ -10,7 +10,7 @@ import markup as mp
 import helpers as hp
 import numpy as np
 
-lines = []
+lines = [] #will contain lines of poetry file
 print("This program analyzes poetry.  The poems you wish to analyze should be stored in exactly the following format:\ntitle:[title]\nauthor:[author]\n\n[body of poem]")
 main_poem_name = raw_input("Please enter the filename of the poem you wish to analyze.\n")
 f = open(main_poem_name, 'rw')
@@ -95,8 +95,7 @@ comp_stds = map(np.std, comp_metrics)
 
 #Printing the analysis to html    
 
-#first, pretty colors!
-#checks what lists the word is in, and then calculates what colors based on that
+#checks what attributes the word possesses, and then calculates what colors to visualize the word's attributes
 def getColors(word):
     index = word.index
     colors = []

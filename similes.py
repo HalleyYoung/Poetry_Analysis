@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 similes.py
 simile detection functions

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 contains the tests performed on a poem to assess its literary features
 """
@@ -278,21 +277,3 @@ def mayBeIambic(words):
         if (linetotals.count(10) > int(0.8*len(linetotals))) and (linetotals.count(10)+linetotals.count(9)+linetotals.count(11) > int(0.85*len(linetotals))):
             return True
     return False
-
-    
-"""returns the words that are least frequently seen in a standard corpus of romance novels
-(which was the closest I could find to poetry)
-I ended up not including this in the program: It takes too long to run, and too many words are not
-included in the corpus.  However, I'm keeping it here because at some point, I would like to incorporate 
-corpus data into the analyzer
-"""
-def uncommon_words(words):
-    indices = []
-    corpus_words = brown.words(categories='romance')
-    tot_corpus_words = len(corpus_words) + 0.0
-    content_words = filter(wd.isHighContent, words)
-    #take any words that account for less than 0.00005% of brown corpus
-    for word in content_words:
-        if (corpus_words.count(word.word)/tot_corpus_words) < 0.000005:
-            indices.append(word.index)
-    return indices    

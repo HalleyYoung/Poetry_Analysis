@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 word.py
 contains Word object definition and general function pertaining to word objects
@@ -61,7 +60,8 @@ def isAdjective(word):
 #returns whether a Word object is a noun
 def isNoun(word):
     return (word.pos in ["N", "NP", "PRO"])    
-    
+
+#returns tokens that are not punctuation or endline tokens    
 def getRealWords(words):
     return filter(lambda i: not(i.isPunct or i.isEOLN), words)    
     
